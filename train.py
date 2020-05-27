@@ -17,8 +17,16 @@ from sklearn.model_selection import train_test_split
 
 import warnings
 warnings.filterwarnings("ignore")
+import os
+
+
+def setup_dirs():
+    for dir in ["models", "optimizers", "outputs", "train_histories"]:
+        if not os.path.exists(dir):
+            os.makedirs(dir)
 
 if __name__ == "__main__":
+    setup_dirs()
     device = torch.device("cuda:0" if torch.cuda.is_available else "cpu")
     lrscheduler = LRScheduler(policy='StepLR', step_size=10, gamma=0.1)
     early_stopping = EarlyStopping(monitor="valid_loss", patience=5, threshold=0.01)
