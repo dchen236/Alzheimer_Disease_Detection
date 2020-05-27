@@ -24,7 +24,7 @@ The dataset was obtained from [kaggle](https://www.kaggle.com/tourist55/alzheime
 
 
 ### Experiments and Result
-The results can be viewed from report_performance.ipynb as well.
+The results can be viewed from [report_performance.ipynb](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/report_performance.ipynb) as well.
 
 We have trained 9 models including: resnet18, resnet34, resnet50, resnet101, resnet152, squeezenet, VGG, alexNet and densenet
 
