@@ -24,6 +24,7 @@ The dataset was obtained from [kaggle](https://www.kaggle.com/tourist55/alzheime
 
 
 ### Experiments and Result
+The results can be viewed from report_performance.ipynb as well.
 
 We have trained 9 models including: resnet18, resnet34, resnet50, resnet101, resnet152, squeezenet, VGG, alexNet and densenet
 
@@ -35,6 +36,7 @@ During training: most of the classes were able to achieve 99% validation accurac
 #### multiclass performance
 multi_class_performance was measured weighted one vs all metrics, for instance, to measure class VeryMildDemented, we treat the rest of 3 classes (MildDemented, ModerateDemented, NonDemented) as Not VeryMildDemented. Using this evaluation, we measure the accuracy for each of the 4 classes, then taking average.
  [More detailed explanation can be viewed from sklearn](https://scikit-learn.org/stable/modules/model_evaluation.html#the-scoring-parameter-defining-model-evaluation-rules), we used average = "weighted".
+ 
 ![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/multi_class_performance.png)
  
  #### Binary performance
