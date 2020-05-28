@@ -1,6 +1,7 @@
 ### TODO:
 - upload models to googleDrive
 - add references
+- upload feature vectors
 
 # Table of content
 
