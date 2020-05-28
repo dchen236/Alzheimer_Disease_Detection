@@ -2,7 +2,9 @@
 - write training instructions
 - upload models to googleDrive
 - create activation map / heapmap on image
-- sample image from each class 
+- sample image from each class
+- tsne visualization
+- add references
 
 ### Dependencies
 
