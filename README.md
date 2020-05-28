@@ -1,12 +1,20 @@
 ### TODO:
-- write training instructions
 - upload models to googleDrive
-- create activation map / heapmap on image
-- sample image from each class
-- tsne visualization
 - add references
 
-### Dependencies
+# Table of content
+
+- [Dependency](#Dependency)
+- [Dataset](#Dataset)
+- [Experiments and Result](#Experiments-and-Result)
+  * [training](#training)
+  * [testing performance](#multiclass-performance)
+- [Training instruction](#Training-instruction)
+- [Troubleshoot](#Troubleshoot)
+- [Resources](#Resources)
+
+
+### Dependency
 
 Python 3.7.3
 install pytorch at : https://pytorch.org/
@@ -55,7 +63,7 @@ multi_class_performance was measured weighted one vs all metrics, for instance, 
 ![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/confusion_matrix_vgg.png)
 ![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/confusion_matrix_dense.png)
 
-### training instruction
+### Training instruction
 Training was performed on a GPU with 8000Mib Memory (GPU is not required, but it will be slow during training and testing)
 - make sure you have installed the dependency from [Dependencies](###dependence) section. 
 - obtain dataset from [kaggle](https://www.kaggle.com/tourist55/alzheimers-dataset-4-class-of-images) and save at the folder as train.py
@@ -71,3 +79,5 @@ Training was performed on a GPU with 8000Mib Memory (GPU is not required, but it
 ### Troubleshoot
 If encounter error message: "RuntimeError:  out of memory. Tried to allocate ... "
 go to cofig.py and change batchsize into smaller values to fit the memory of your device
+
+### Resources
