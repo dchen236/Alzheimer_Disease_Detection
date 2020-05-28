@@ -1,8 +1,7 @@
 from __future__ import print_function, division
 import torch
-from torchvision import transforms, datasets
 from my_utils import *
-from config import MODELS, SAVE_MODELS
+from config import data_transforms
 # skorch
 from skorch import NeuralNetClassifier
 import pickle
@@ -54,16 +53,5 @@ if __name__ == "__main__":
     img_path = test_df['path'].values
     labels = test_df['num_label'].values
     input_size = 244
-    data_transforms = {"train": transforms.Compose([
-        transforms.ToPILImage(),
-        transforms.Resize((input_size, input_size)),
-        transforms.RandomHorizontalFlip(p=0.5),
-        transforms.ToTensor(),
-        transforms.Normalize((0.485,), (0.229,))]),
-        "val": transforms.Compose([
-            transforms.ToPILImage(),
-            transforms.Resize((input_size, input_size)),
-            transforms.ToTensor(),
-            transforms.Normalize((0.485,), (0.229,))])}
     dataset_test = Alzheimer_Dataset(img_path, labels, transform=data_transforms['val'])
     predict(model, device, model_param_path, dataset_test, img_path)

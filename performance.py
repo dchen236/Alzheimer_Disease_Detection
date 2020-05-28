@@ -101,28 +101,6 @@ def side_by_side_confusion_matrix(title, target, preds, figsize=(15, 10)):
     plt.tight_layout(pad=3)
     fig.suptitle(title, fontsize = 15)
     plt.show()
-'''
-Report performance in temrs of metrics and confusion matrix
-This will report multiclass performance and binary performance (Demented or Not Demented)
-Args:
-    title: name of the testing model
-    target: ground truth
-    preds: prediction from model
-'''
-# def report_performance(title, target, preds):
-#     labels = ['VeryMildDemented', 'ModerateDemented', 'MildDemented', 'NonDemented']
-#     labels_bi = ["NonDemented", "Demented"]
-# #     fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(5, 3))
-#     cnf_matrix = confusion_matrix(target, preds)
-#     plot_confusion_matrix(cnf_matrix, classes=labels,
-#                            title='Confusion matrix, with normalization', normalize = True)
-#     metrics_overall(target, preds)
-#     target_bi = [0 if label == 3 else 1 for label in target] # 0 not demented
-#     preds_bi = [0 if label == 3 else 1 for label in preds] # 0 not demented
-#     cnf_matrix = confusion_matrix(target_bi, preds_bi)
-#     plot_confusion_matrix(cnf_matrix, classes=labels_bi,
-#                            title='Confusion matrix, binary', normalize = True)
-#     metrics_overall(target_bi, preds_bi, binary = True)
 
 '''
 extract train loss, validation loss and validation acc 

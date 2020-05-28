@@ -5,7 +5,7 @@ import torch.optim as optim
 from torchvision import transforms, datasets
 import pandas as pd
 from my_utils import *
-from config import MODELS, SAVE_HIST, SAVE_MODELS, SAVE_OPT, MAX_EPs, BATCH_SIZE
+from config import MODELS, SAVE_HIST, SAVE_MODELS, SAVE_OPT, MAX_EPs, BATCH_SIZE, data_transforms
 # skorch
 import skorch
 from skorch import NeuralNetClassifier
@@ -21,7 +21,7 @@ import os
 
 
 def setup_dirs():
-    for dir in ["models", "optimizers", "outputs", "train_histories"]:
+    for dir in ["models", "optimizers", "outputs", "train_histories", "feature_vectors"]:
         if not os.path.exists(dir):
             os.makedirs(dir)
 
@@ -47,18 +47,6 @@ if __name__ == "__main__":
             lr = 0.01
         print("Training with model ", model)
         model, input_size = get_pretrained_models(model)
-        # save checkpoints during callback
-        data_transforms = {"train": transforms.Compose([
-                                    transforms.ToPILImage(),
-                                    transforms.Resize((input_size, input_size)),
-                                    transforms.RandomHorizontalFlip(p=0.5),
-                                    transforms.ToTensor(),
-                                    transforms.Normalize((0.485,), (0.229,))]),
-                            "val": transforms.Compose([
-                                transforms.ToPILImage(),
-                                transforms.Resize((input_size, input_size)),
-                                transforms.ToTensor(),
-                                transforms.Normalize((0.485,), (0.229,))])}
         dataset_train = Alzheimer_Dataset(X_train, y_train, transform=data_transforms['train'])
         dataset_val = Alzheimer_Dataset(X_val, y_val, transform=data_transforms['train'])
 
