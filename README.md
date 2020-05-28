@@ -1,9 +1,8 @@
 ### TODO:
 - upload models to googleDrive
 - add references
-- upload feature vectors
 
-# Table of content
+### Table of content
 
 - [Dependency](#Dependency)
 - [Dataset](#Dataset)
@@ -64,11 +63,21 @@ multi_class_performance was measured weighted one vs all metrics, for instance, 
 ![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/confusion_matrix_vgg.png)
 ![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/confusion_matrix_dense.png)
 
+#### Grad-Cam Activation
+we have compared the actual testing image with grad-cam activation overlayed images using resnet models, more results can be viewed at [Grad-cAM.ipynb](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/Grad-cAM.ipynb)
+
+![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/grad_cam10_res34.png)
+![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/grad_cam46_res34.png)
+![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/grad_cam80_res34.png)
+![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/grad_cam10_res152.png)
+![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/grad_cam_46_res152.png)
+![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/grad_cam100_res152.png)
+
 ### Training instruction
 Training was performed on a GPU with 8000Mib Memory (GPU is not required, but it will be slow during training and testing)
-- make sure you have installed the dependency from [Dependencies](###dependence) section. 
+- make sure you have installed the dependency from [Dependency](#Dependency) section. 
 - obtain dataset from [kaggle](https://www.kaggle.com/tourist55/alzheimers-dataset-4-class-of-images) and save at the folder as train.py
-- download dataset.csv from this repo, save at the same folder as train.py, this csv file
+- download [dataset.csv](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/dataset.csv) from this repo, save at the same folder as train.py, this csv file
 - to train all 9 models, nothing needs to be modified, rum train.py using python3 train.py
 - to train with selected models, go to config.py and modify `MODELS`
 - if you encounter memory issues during training, go to config.py modify batch size for the model causing the memory error
