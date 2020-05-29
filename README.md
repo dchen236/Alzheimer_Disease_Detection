@@ -9,6 +9,8 @@
 - [Experiments and Result](#Experiments-and-Result)
   * [training](#training)
   * [testing performance](#multiclass-performance)
+  * [Grad Cam](#Grad-Cam)
+  * [TSNE](#TSNE)
 - [Training instruction](#Training-instruction)
 - [Troubleshoot](#Troubleshoot)
 - [Resources](#Resources)
@@ -72,6 +74,19 @@ we have compared the actual testing image with grad-cam activation overlayed ima
 ![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/grad_cam10_res152.png)
 ![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/grad_cam_46_res152.png)
 ![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/grad_cam100_res152.png)
+
+
+#### TSNE
+
+we run the models on testing images and extract the feature vector prior to the fully connected layer.
+More examples are available from [tsne_cluster.ipynb](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/tsne_cluster.ipynb)
+
+![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/tsne_res101.png)
+![low testing accuracy: 0.59](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/tsne_res152.png)
+![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/tsne_vgg.png)
+![low testing accuracy: 0.55 ](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/tsne_sqeeze.png)
+
+
 
 ### Training instruction
 Training was performed on a GPU with 8000Mib Memory (GPU is not required, but it will be slow during training and testing)
