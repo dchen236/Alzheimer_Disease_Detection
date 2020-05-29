@@ -13,7 +13,6 @@
   * [TSNE](#TSNE)
 - [Training instruction](#Training-instruction)
 - [Troubleshoot](#Troubleshoot)
-- [Resources](#Resources)
 
 
 ### Dependency
@@ -111,4 +110,3 @@ Training was performed on a GPU with 8000Mib Memory (GPU is not required, but it
 If encounter error message: "RuntimeError:  out of memory. Tried to allocate ... "
 go to cofig.py and change batchsize into smaller values to fit the memory of your device
 
-### Resources
