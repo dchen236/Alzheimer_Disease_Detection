@@ -56,6 +56,7 @@ multi_class_performance was measured weighted one vs all metrics, for instance, 
  #### Binary performance
  Another approach we used to treat classes as {Demented, Not_Demented} (Demented includes all 3 level of Dementia).
  Then the accuracy can be evaluated using standard binary classfication sestting. 
+ 
 ![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/binary_performance.png)
 
 #### Samples of Confusion Matrix
