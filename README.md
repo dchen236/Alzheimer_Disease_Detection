@@ -82,10 +82,14 @@ we run the models on testing images and extract the feature vector prior to the 
 More examples are available from [tsne_cluster.ipynb](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/tsne_cluster.ipynb)
 
 ![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/tsne_res101.png)
+
 low testing accuracy: 0.59
+
 ![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/tsne_res152.png)
 ![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/tsne_vgg.png)
+
 low testing accuracy: 0.55 
+
 ![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/tsne_sqeeze.png)
 
 
