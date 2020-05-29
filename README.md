@@ -83,12 +83,12 @@ More examples are available from [tsne_cluster.ipynb](https://github.com/dchen23
 
 ![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/tsne_res101.png)
 
-low testing accuracy: 0.59
+res152 had low testing accuracy: 0.59
 
 ![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/tsne_res152.png)
 ![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/tsne_vgg.png)
 
-low testing accuracy: 0.55 
+sqeezenet had low testing accuracy: 0.55 
 
 ![](https://github.com/dchen236/Alzheimer_Disease_Detection/blob/master/figures/tsne_sqeeze.png)
 
