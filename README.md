@@ -1,7 +1,6 @@
 ### TODO:
 - upload models to googleDrive
 - upload feature vectors to googleDrive
-- change binary accuracy score to balanced accuracy score
 
 ### Table of content
 
