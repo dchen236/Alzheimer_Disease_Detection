@@ -1,7 +1,3 @@
-### TODO:
-- upload models to googleDrive
-- upload feature vectors to googleDrive
-
 ### Table of content
 
 - [Dependency](#Dependency)
